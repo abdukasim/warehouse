@@ -1,4 +1,7 @@
 import React from 'react'
+import Edible from './views/items/Edible'
+import Items from './views/items/Items'
+import NonEdible from './views/items/NonEdible'
 
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
@@ -53,6 +56,9 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
+  { path: '/items', name: 'Items', element: Items },
+  { path: '/items/edible', name: 'Edible', element: Edible },
+  { path: '/items/non-edible', name: 'Non Edible', element: NonEdible },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },
